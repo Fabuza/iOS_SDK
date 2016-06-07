@@ -44,6 +44,9 @@
         [self openFabuzaWithParams:@{@"bundleId" : [[NSBundle mainBundle] bundleIdentifier]}];
     }
 }
+
+#pragma mark - SCKit initialization
+
 - (void)openFabuzaWithParams:(NSDictionary *)params {
     if (self.testEngine == nil) {
         self.testEngine = [FZTestEngine new];
@@ -52,8 +55,6 @@
     }
     [self.testEngine openFabuzaWithParams:params];
 }
-
-#pragma mark - SCKit initialization
 
 - (void)initSCKit {
     self.testEngine = [FZTestEngine new];
@@ -75,7 +76,8 @@
 #pragma mark - FZTestEngineDelegate
 
 - (void)startRecordScreen:(BOOL)screenRecord andCamera:(BOOL)cameraRecord {
-    [self.window startRecordScreen:screenRecord andCamera:NO];
+    //Для проектов использующих камеру, запись теста с камеры надо выключать так andCamera:NO
+    [self.window startRecordScreen:screenRecord andCamera:YES];
 }
 
 - (void)stopRecordWithProgress:(void (^)(NSProgress *progress))progress
