@@ -8,8 +8,8 @@
 3. В настройках проекта выставить параметр "Embedded content contains swift code" в YES
 
 4. В Info.plist проекта добавить разрешение на передачу по сети: 
-     NSAppTransportSecurity 
-     NSAllowsArbitraryLoads
+   NSAppTransportSecurity 
+   NSAllowsArbitraryLoads
 
 5. Если у приложения нет уникальной URL схемы, то ее нужно создать:
    CFBundleURLTypes
@@ -49,11 +49,11 @@
 
 7. В AppDelegate.h вставить:
 
-    #import 
+    \#import 
 
 и два свойства
     @property (strong, nonatomic) FZTouchVisualizerWindow _window;_
-    _@property (nonatomic) NSURL _externalUrl;
+    \_@property (nonatomic) NSURL _externalUrl;
 
 8. В AppDelegate.m вставить:
 
@@ -66,7 +66,7 @@
 
     * if (!customWindow) {
 
-    * customWindow = [[FZTouchVisualizerWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    * customWindow = \[[FZTouchVisualizerWindow alloc] initWithFrame:\[[UIScreen mainScreen] bounds]];
     * }
     
     * return customWindow;
@@ -104,7 +104,7 @@
     * [self.testEngine openFabuzaWithParams:params];
     * }
 
-    #pragma mark - SCKit initialization
+    \#pragma mark - SCKit initialization
 
     * (void)initSCKit {
     * self.testEngine = [FZTestEngine new];
@@ -113,7 +113,7 @@
     * [self.testEngine on];
     * }
 
-    #pragma mark - FZTestEngineDataSource
+    \#pragma mark - FZTestEngineDataSource
 
     * (NSURL *)getExternalUrl {
     * return self.externalUrl;
@@ -124,7 +124,7 @@
     * return self.window.videoSize;
     * }
 
-    #pragma mark - FZTestEngineDelegate
+    \#pragma mark - FZTestEngineDelegate
 
     * (void)startRecordScreen:(BOOL)screenRecord andCamera:(BOOL)cameraRecord {
     * //Для проектов использующих камеру, запись надо выключать andCamera:NO
