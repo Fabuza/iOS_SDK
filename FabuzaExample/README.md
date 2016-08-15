@@ -19,7 +19,7 @@
    fabuzaExample
 
 6. Поскольку фрэймворк собран универсальным и для симулятора и для телефона, то перед отправкой в аппстор из него нужно удалить архитектуру симулятора. Это делает нижеследующий скрипт, который нужно в настройках таргета, на закладке Build Phases добавить, как "New run script phase":
-    ```
+~~~~
     APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
     This script loops through the frameworks embedded in the application and removes unused architectures.
     find "$APP_PATH" -name '*.framework' -type d | while read -r FRAMEWORK
@@ -46,7 +46,7 @@
     mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
 
     done
-    ```
+~~~~
 7. В AppDelegate.h вставить:
     ```
     #import 
