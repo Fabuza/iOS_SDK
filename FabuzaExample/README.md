@@ -62,87 +62,87 @@
     @property (nonatomic) FZTestEngine *testEngine;
     @end
 
-    * (FZTouchVisualizerWindow _)window {_
-    * _  static FZTouchVisualizerWindow _customWindow = nil;
+    (FZTouchVisualizerWindow _)window {_
+    _  static FZTouchVisualizerWindow _customWindow = nil;
 
-    * if (!customWindow) {
+    if (!customWindow) {
 
-    * customWindow = \[[FZTouchVisualizerWindow alloc] initWithFrame:\[[UIScreen mainScreen] bounds]];
-    * }
+    customWindow = \[[FZTouchVisualizerWindow alloc] initWithFrame:\[[UIScreen mainScreen] bounds]];
+    }
     
-    * return customWindow;
+    return customWindow;
 
-    * }
+    }
 
     //В iOS9 нужно использовать
     //- (BOOL)application:(UIApplication _)application openURL:(NSURL _)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 
-    * (BOOL)application:(UIApplication _)app openURL:(NSURL _)url options:(NSDictionary *)options {
-    * self.externalUrl = url;
+    (BOOL)application:(UIApplication _)app openURL:(NSURL _)url options:(NSDictionary *)options {
+    self.externalUrl = url;
 
-    * return YES;
+    return YES;
 
-    * }
+    }
 
-    * (void)applicationDidBecomeActive:(UIApplication *)application {
+    (void)applicationDidBecomeActive:(UIApplication *)application {
 
-    * if (self.externalUrl) {
+    if (self.externalUrl) {
 
-    * [self initSCKit]; 
+    [self initSCKit]; 
 
-    * } else {
+    } else {
 
-    * [self openFabuzaWithParams:@{@"bundleId" : [[NSBundle mainBundle] bundleIdentifier]}]; 
+    [self openFabuzaWithParams:@{@"bundleId" : [[NSBundle mainBundle] bundleIdentifier]}]; 
 
-    * }
-    * }
+    }
+    }
 
-    * (void)openFabuzaWithParams:(NSDictionary *)params {
+    (void)openFabuzaWithParams:(NSDictionary *)params {
 
-    * if (self.testEngine == nil) {
-    * self.testEngine = [FZTestEngine new];   self.testEngine.dataSource = self;   self.testEngine.delegate = self; 
-    * }
-    * [self.testEngine openFabuzaWithParams:params];
-    * }
+    if (self.testEngine == nil) {
+    self.testEngine = [FZTestEngine new];   self.testEngine.dataSource = self;   self.testEngine.delegate = self; 
+    }
+    [self.testEngine openFabuzaWithParams:params];
+    }
 
     \#pragma mark - SCKit initialization
 
-    * (void)initSCKit {
-    * self.testEngine = [FZTestEngine new];
-    * self.testEngine.dataSource = self;
-    * self.testEngine.delegate = self;
-    * [self.testEngine on];
-    * }
+    (void)initSCKit {
+    self.testEngine = [FZTestEngine new];
+    self.testEngine.dataSource = self;
+    self.testEngine.delegate = self;
+    [self.testEngine on];
+    }
 
     \#pragma mark - FZTestEngineDataSource
 
-    * (NSURL *)getExternalUrl {
-    * return self.externalUrl;
-    * }
+    (NSURL *)getExternalUrl {
+    return self.externalUrl;
+    }
 
-    * (NSUInteger)getVideoFilesSize {
+    (NSUInteger)getVideoFilesSize {
 
-    * return self.window.videoSize;
-    * }
+    return self.window.videoSize;
+    }
 
     \#pragma mark - FZTestEngineDelegate
 
-    * (void)startRecordScreen:(BOOL)screenRecord andCamera:(BOOL)cameraRecord {
-    * //Для проектов использующих камеру, запись надо выключать andCamera:NO
-    * [self.window startRecordScreen:screenRecord andCamera:YES];
-    * }
+    (void)startRecordScreen:(BOOL)screenRecord andCamera:(BOOL)cameraRecord {
+    //Для проектов использующих камеру, запись надо выключать andCamera:NO
+    [self.window startRecordScreen:screenRecord andCamera:YES];
+    }
 
-    * (void)stopRecordWithProgress:(void (^)(NSProgress _progress))progress_
+    (void)stopRecordWithProgress:(void (^)(NSProgress _progress))progress_
 
-    * _success:(void (^)(NSString _pathToScreenFile, NSString _pathToCameraFile))success_
-    * _failure:(void (^)(NSError _error))failure {
-    * [self.window stopRecordWithProgress:progress success:success failure:failure];
-    * }
+    _success:(void (^)(NSString _pathToScreenFile, NSString _pathToCameraFile))success_
+    _failure:(void (^)(NSError _error))failure {
+    [self.window stopRecordWithProgress:progress success:success failure:failure];
+    }
 
-    * (void)didEndProcess {
+    (void)didEndProcess {
 
-    * NSDictionary *params = [self.testEngine parseExternalTestParamsFromUrl:self.externalUrl];
-    * [self openFabuzaWithParams:params];
-    * }
-    *
+    NSDictionary *params = [self.testEngine parseExternalTestParamsFromUrl:self.externalUrl];
+    [self openFabuzaWithParams:params];
+    }
+    
     ```
