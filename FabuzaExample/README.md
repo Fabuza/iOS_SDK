@@ -12,7 +12,7 @@
    NSAppTransportSecurity 
    NSAllowsArbitraryLoads
 ~~~~
-5. Если у приложения нет уникальной URL схемы, то ее нужно создать:
+\5. Если у приложения нет уникальной URL схемы, то ее нужно создать:
 ~~~~
    CFBundleURLTypes
    CFBundleURLName
@@ -20,7 +20,7 @@
    CFBundleURLSchemes
    fabuzaExample
 ~~~~
-6. Поскольку фрэймворк собран универсальным и для симулятора и для телефона, то перед отправкой в аппстор из него нужно удалить архитектуру симулятора. Это делает нижеследующий скрипт, который нужно в настройках таргета, на закладке Build Phases добавить, как "New run script phase":
+\6. Поскольку фрэймворк собран универсальным и для симулятора и для телефона, то перед отправкой в аппстор из него нужно удалить архитектуру симулятора. Это делает нижеследующий скрипт, который нужно в настройках таргета, на закладке Build Phases добавить, как "New run script phase":
 ~~~~
     APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
     This script loops through the frameworks embedded in the application and removes unused architectures.
@@ -49,14 +49,14 @@
 
     done
 ~~~~
-7. В AppDelegate.h вставить:
+\7. В AppDelegate.h вставить:
     ``#import``
 и два свойства
 ~~~~
     @property (strong, nonatomic) FZTouchVisualizerWindow _window;_
     _@property (nonatomic) NSURL _externalUrl;
 ~~~~
-8. В AppDelegate.m вставить:
+\8. В AppDelegate.m вставить:
 ~~~~    @interface AppDelegate () 
     @property (nonatomic) FZTestEngine *testEngine;
     @end
