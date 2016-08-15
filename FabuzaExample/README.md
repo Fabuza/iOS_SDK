@@ -67,7 +67,7 @@
 
     if (!customWindow) {
 
-    customWindow = \[[FZTouchVisualizerWindow alloc] initWithFrame:\[[UIScreen mainScreen] bounds]];
+    customWindow = [[FZTouchVisualizerWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     }
     
     return customWindow;
@@ -105,7 +105,7 @@
     [self.testEngine openFabuzaWithParams:params];
     }
 
-    \#pragma mark - SCKit initialization
+    #pragma mark - SCKit initialization
 
     (void)initSCKit {
     self.testEngine = [FZTestEngine new];
@@ -114,7 +114,7 @@
     [self.testEngine on];
     }
 
-    \#pragma mark - FZTestEngineDataSource
+    #pragma mark - FZTestEngineDataSource
 
     (NSURL *)getExternalUrl {
     return self.externalUrl;
@@ -125,7 +125,7 @@
     return self.window.videoSize;
     }
 
-    \#pragma mark - FZTestEngineDelegate
+    #pragma mark - FZTestEngineDelegate
 
     (void)startRecordScreen:(BOOL)screenRecord andCamera:(BOOL)cameraRecord {
     //Для проектов использующих камеру, запись надо выключать andCamera:NO
