@@ -52,9 +52,10 @@
     \#import 
 
 и два свойства
+```java
     @property (strong, nonatomic) FZTouchVisualizerWindow _window;_
     \_@property (nonatomic) NSURL _externalUrl;
-
+```
 8. В AppDelegate.m вставить:
 
     @interface AppDelegate () 
