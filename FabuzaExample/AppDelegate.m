@@ -35,20 +35,26 @@
     return YES;
 }
 
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [self.window pauseRecord];
+}
+
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     if (self.externalUrl) {
         [self initSCKit];
+        [self.window resumeRecord];
     } else {
         [self openFabuzaWithParams:@{@"bundleId" : [[NSBundle mainBundle] bundleIdentifier]}];
     }
 }
+
+#pragma mark - SCKit initialization
+
 - (void)openFabuzaWithParams:(NSDictionary *)params {
     [FZTestEngine instance].dataSource = self;
     [FZTestEngine instance].delegate = self;
     [[FZTestEngine instance] openFabuzaWithParams:params];
 }
-
-#pragma mark - SCKit initialization
 
 - (void)initSCKit {
     [FZTestEngine instance].dataSource = self;
@@ -69,7 +75,8 @@
 #pragma mark - FZTestEngineDelegate
 
 - (void)startRecordScreen:(BOOL)screenRecord andCamera:(BOOL)cameraRecord {
-    [self.window startRecordScreen:screenRecord andCamera:NO];
+    //Для проектов использующих камеру, запись теста с камеры надо выключать так andCamera:NO
+    [self.window startRecordScreen:screenRecord andCamera:YES];
 }
 
 - (void)stopRecordWithProgress:(void (^)(NSProgress *progress))progress

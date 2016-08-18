@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/SCKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		35nzueZEkTkYWtsEcCJMQqQI86o=
+		sVymBOo9FePu5MF6yh2SS8spInQ=
 		</data>
 		<key>Modules/SCKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -38,12 +38,30 @@
 		</data>
 		<key>Modules/SCKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		xUTbAYL3Gt5jGXT0Qdaw+6AKiNo=
+		gBk2fFwyXcnnRh1oH2KtTQ94xAw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		lY1ddXPuy33MFCWur25FvXOCkhY=
 		</data>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IokME7ffq9KMZJeB5Fm1Vx/+KvA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ru.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9VcWV/r+PScj41tWa99F36/RBng=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -106,11 +124,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			35nzueZEkTkYWtsEcCJMQqQI86o=
+			sVymBOo9FePu5MF6yh2SS8spInQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			AulmbBsKKzCnr3rBmcomjg4IcMZRVcb+5JJU4p2RNFU=
+			BJIk6NLiQe8uj6AV+S5h2ZbLJGlPC+udVzO9ETHc0u8=
 			</data>
 		</dict>
 		<key>Modules/SCKit.swiftmodule/arm64.swiftdoc</key>
@@ -128,11 +146,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xUTbAYL3Gt5jGXT0Qdaw+6AKiNo=
+			gBk2fFwyXcnnRh1oH2KtTQ94xAw=
 			</data>
 			<key>hash2</key>
 			<data>
-			bkglIgO5o3yYj6/M/8clDKifwaLDMwPZPuCRQTKI71o=
+			I9FlE8MJF4arXN6nxGz3Uaw4ygF1uBqJ+0sAIZB9Veg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -145,6 +163,32 @@
 			<data>
 			tHttSKxAd/z8WsGkPapFpU94WBHBGe07xfDhz1ZYJA8=
 			</data>
+		</dict>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IokME7ffq9KMZJeB5Fm1Vx/+KvA=
+			</data>
+			<key>hash2</key>
+			<data>
+			vugPiIvcDBipfFfT5qvSSPL/YuUSxcRpwf7I9SkSjYE=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ru.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9VcWV/r+PScj41tWa99F36/RBng=
+			</data>
+			<key>hash2</key>
+			<data>
+			l0OZJazfj8zERpRROnza6M89f8Z+/GqIte5atTxLZy4=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>
