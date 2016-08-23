@@ -33,7 +33,7 @@
                        success:(nonnull void (^)(NSString * _Nonnull pathToScreenFile, NSString * _Nonnull pathToCameraFile))success
                        failure:(nonnull void (^)(NSError * _Nonnull error))failure;
 
-//@optional
+@optional
 - (void)didLoadUrl:(NSString *_Nullable)urlString;
 - (void)didStartApp:(NSDictionary *_Nonnull)params;
 - (void)waitForBeginTask:(BOOL)firstStep complete:(dispatch_block_t _Nonnull)complete;
