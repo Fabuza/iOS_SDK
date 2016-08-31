@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7C9859351D6C9C62002BF446"
-               BuildableName = "FabuzaExampleSwift.app"
+               BuildableName = "FabuzaExample.app"
                BlueprintName = "FabuzaExampleSwift"
                ReferencedContainer = "container:FabuzaExampleSwift.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C9859351D6C9C62002BF446"
-            BuildableName = "FabuzaExampleSwift.app"
+            BuildableName = "FabuzaExample.app"
             BlueprintName = "FabuzaExampleSwift"
             ReferencedContainer = "container:FabuzaExampleSwift.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C9859351D6C9C62002BF446"
-            BuildableName = "FabuzaExampleSwift.app"
+            BuildableName = "FabuzaExample.app"
             BlueprintName = "FabuzaExampleSwift"
             ReferencedContainer = "container:FabuzaExampleSwift.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7C9859351D6C9C62002BF446"
-            BuildableName = "FabuzaExampleSwift.app"
+            BuildableName = "FabuzaExample.app"
             BlueprintName = "FabuzaExampleSwift"
             ReferencedContainer = "container:FabuzaExampleSwift.xcodeproj">
          </BuildableReference>
