@@ -7,6 +7,12 @@
 //
 #include <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    NeedRecord = 0,
+    CanRefuse,
+    NotRecord,
+} RecordTypes;
+
 @interface FZTouchVisualizerWindow : UIWindow
 
 @property (nonatomic, readonly, getter=isActive) BOOL active;
@@ -14,7 +20,9 @@
 @property (nonatomic, readonly) NSArray *_Nonnull touches;
 @property (nonatomic, readonly) NSUInteger videoSize;
 
-- (void)startRecordScreen:(BOOL)screenRecord andCamera:(BOOL)cameraRecord;
+- (void)initCameraIfNeeded:(dispatch_block_t)complete;
+
+- (void)startRecordScreen:(RecordTypes)screenRecord andCamera:(RecordTypes)cameraRecord;
 - (void)pauseRecord;
 - (void)resumeRecord;
 - (void)stopRecordWithProgress:(nullable void (^)(NSProgress * _Nonnull progress))progress

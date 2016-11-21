@@ -28,7 +28,7 @@
 @protocol FZTestEngineDelegate <NSObject>
 
 //@required
-- (void)startRecordScreen:(BOOL)screenRecord andCamera:(BOOL)cameraRecord;
+- (void)startRecordScreen:(NSUInteger)screenRecord andCamera:(NSUInteger)cameraRecord;
 - (void)stopRecordWithProgress:(nullable void (^)(NSProgress * _Nonnull progress))progress
                        success:(nonnull void (^)(NSString * _Nonnull pathToScreenFile, NSString * _Nonnull pathToCameraFile))success
                        failure:(nonnull void (^)(NSError * _Nonnull error))failure;
@@ -58,6 +58,7 @@
 @property (nonatomic, readonly) BOOL needCam;
 @property (nonatomic, readonly) BOOL needMic;
 @property (nonatomic, readonly) BOOL needLoc;
+@property (nonatomic, readonly) BOOL isReadyToTask;
 @property (nonatomic, assign) id<FZTestEngineDataSource> _Nonnull dataSource;
 @property (nonatomic, assign) id<FZTestEngineDelegate> _Nonnull delegate;
 
@@ -75,5 +76,6 @@
 - (BOOL)checkDiscSpace;
 - (BOOL)checkLocationEnabled;
 - (void)connectedCompletionBlock:(void(^ _Nonnull)(BOOL connected))block;
+- (void)dropPushStatus;
 
 @end

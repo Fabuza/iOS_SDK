@@ -38,6 +38,16 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Need Camera</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Need Location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Геолокация используется только когда приложение запущено</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Need Microphone</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need Photo Library</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

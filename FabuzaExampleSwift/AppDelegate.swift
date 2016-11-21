@@ -13,7 +13,7 @@ import SCKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow? = FZTouchVisualizerWindow(frame: UIScreen.mainScreen().bounds)
+    var window: UIWindow? = FZTouchVisualizerWindow(frame: UIScreen.main.bounds)
     
     var customWindow: FZTouchVisualizerWindow
         {
@@ -24,39 +24,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let schemeName = "fabuzaExample"
     
-    var externalUrl: NSURL? = nil
+    var externalUrl: URL? = nil
     
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         return true
     }
     
-    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         self.externalUrl = url
         return true
     }
     
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         self.customWindow.pauseRecord()
     }
     
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         if self.externalUrl != nil {
             self.initSDK()
             self.customWindow.resumeRecord()
         } else {
-            self.openFabuzaWithParams(["bundleId" : NSBundle.mainBundle().bundleIdentifier!])
+            self.openFabuzaWithParams(["bundleId" : Bundle.main.bundleIdentifier!])
         }
     }
     
-    private func openFabuzaWithParams(params: [NSObject:AnyObject])
+    fileprivate func openFabuzaWithParams(_ params: [AnyHashable: Any])
     {
         FZTestEngine.instance().dataSource = self;
         FZTestEngine.instance().delegate = self;
-        FZTestEngine.instance().openFabuzaWithParams(params)
+        FZTestEngine.instance().openFabuza(withParams: params)
     }
     
-    private func initSDK()
+    fileprivate func initSDK()
     {
         FZTestEngine.instance().dataSource = self;
         FZTestEngine.instance().delegate = self;
@@ -67,7 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate : FZTestEngineDataSource, FZTestEngineDelegate
 {
-    func getExternalUrl() -> NSURL?
+
+    func getExternalUrl() -> URL?
     {
         return self.externalUrl
     }
@@ -77,16 +78,16 @@ extension AppDelegate : FZTestEngineDataSource, FZTestEngineDelegate
         return self.customWindow.videoSize
     }
     
-    func startRecordScreen(screenRecord: Bool, andCamera cameraRecord: Bool) {
-        self.customWindow.startRecordScreen(screenRecord, andCamera: false)
+    public func startRecordScreen(_ screenRecord: UInt, andCamera cameraRecord: UInt) {
+        self.customWindow.startRecordScreen(RecordTypes(rawValue: screenRecord), andCamera: RecordTypes(rawValue: cameraRecord))
     }
     
-    func stopRecordWithProgress(progress: ((NSProgress) -> Void)?, success: (String, String) -> Void, failure: (NSError) -> Void) {
-        self.customWindow.stopRecordWithProgress(progress, success: success, failure: failure)
+    public func stopRecord(progress: ((Progress) -> Void)?, success: @escaping (String, String) -> Void, failure: @escaping (Error) -> Void) {
+        self.customWindow.stopRecord(progress: progress, success: success, failure: failure)
     }
-    
+
     func didEndProcess() {
-        self.openFabuzaWithParams(FZTestEngine.instance().parseExternalTestParamsFromUrl(self.externalUrl)!)
+        self.openFabuzaWithParams(FZTestEngine.instance().parseExternalTestParams(from: self.externalUrl)!)
     }
     
     //Остальные методы делегата FZTestEngineDelegate не надо экспортировать

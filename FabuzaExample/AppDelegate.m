@@ -74,9 +74,8 @@
 
 #pragma mark - FZTestEngineDelegate
 
-- (void)startRecordScreen:(BOOL)screenRecord andCamera:(BOOL)cameraRecord {
-    //Для проектов использующих камеру, запись теста с камеры надо выключать так andCamera:NO
-    [self.window startRecordScreen:screenRecord andCamera:YES];
+- (void)startRecordScreen:(NSUInteger)screenRecord andCamera:(NSUInteger)cameraRecord {
+    [self.window startRecordScreen:screenRecord andCamera:cameraRecord];
 }
 
 - (void)stopRecordWithProgress:(void (^)(NSProgress *progress))progress
