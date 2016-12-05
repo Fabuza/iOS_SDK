@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class FZTouchVisualizerWindow;
+
 @protocol FZTestEngineDataSource <NSObject>
 
-@required
-- (NSUInteger)getVideoFilesSize;
+//@required
+//- (NSUInteger)getVideoFilesSize;
 
 @optional
 - (UIViewController *_Nonnull)getRootController;
@@ -21,7 +23,7 @@
 - (NSArray *_Nonnull)getCustomStringEvents;
 - (NSArray *_Nonnull)getRoutes;
 - (NSDictionary *_Nonnull)getClientScriptActionEvent;
-- (NSURL *_Nullable)getExternalUrl;
+//- (NSURL *_Nullable)getExternalUrl;
 
 @end
 
@@ -43,6 +45,7 @@
 - (void)didEndTest;
 - (void)readyForTest;
 - (void)didWaitTest;
+- (void)didBeginTask;
 
 @end
 
@@ -52,6 +55,7 @@
 @property (nonatomic, readonly) BOOL continueTest;
 @property (nonatomic, readonly) BOOL isAppTest;
 @property (nonatomic, readonly) BOOL isWebTest;
+@property (nonatomic, readonly) BOOL isEndTest;
 @property (nonatomic) BOOL camBlockedByApp;
 @property (nonatomic) BOOL camBlockedByUser;
 @property (nonatomic) BOOL micBlockedByUser;
@@ -61,6 +65,9 @@
 @property (nonatomic, readonly) BOOL isReadyToTask;
 @property (nonatomic, assign) id<FZTestEngineDataSource> _Nonnull dataSource;
 @property (nonatomic, assign) id<FZTestEngineDelegate> _Nonnull delegate;
+
+@property (nonatomic) NSURL * _Nullable externalUrl;
+@property (nonatomic, strong)  UIWindow * _Nonnull window;
 
 + (instancetype _Nonnull)instance;
 

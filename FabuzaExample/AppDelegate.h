@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SCKit/SCKit.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) FZTouchVisualizerWindow *window;
-@property (nonatomic) NSURL *externalUrl;
+@property (strong, nonatomic) UIWindow *window;
 
 @end
 

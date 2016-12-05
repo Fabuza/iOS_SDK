@@ -119,7 +119,7 @@
 				TargetAttributes = {
 					7C9859351D6C9C62002BF446 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -302,8 +302,9 @@
 				);
 				INFOPLIST_FILE = FabuzaExampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.fabuza.fabuzaExample;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.flexis.idecide.corpsales;
 				PRODUCT_NAME = FabuzaExample;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -321,8 +322,11 @@
 				);
 				INFOPLIST_FILE = FabuzaExampleSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.fabuza.fabuzaExample;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.flexis.idecide.corpsales;
 				PRODUCT_NAME = FabuzaExample;
+				PROVISIONING_PROFILE = "a89c0b98-4dae-4b3b-a607-b1b03abbc278";
+				PROVISIONING_PROFILE_SPECIFIER = "CorpSales iDecide 2016";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -17,7 +17,6 @@
 		7C8DA2461CF34E50008D51FB /* SCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8DA2431CF349DC008D51FB /* SCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7CBF6FD51D01CAAA00608365 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF6FCE1D01CAAA00608365 /* UIAlertController+Blocks.m */; };
 		7CBF6FD61D01CAAA00608365 /* UIAlertController+messages.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF6FD01D01CAAA00608365 /* UIAlertController+messages.m */; };
-		7CDE989A1D0715FD00DC4444 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE98991D0715FD00DC4444 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,7 +49,6 @@
 		7CBF6FCE1D01CAAA00608365 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 		7CBF6FCF1D01CAAA00608365 /* UIAlertController+messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+messages.h"; sourceTree = "<group>"; };
 		7CBF6FD01D01CAAA00608365 /* UIAlertController+messages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+messages.m"; sourceTree = "<group>"; };
-		7CDE98991D0715FD00DC4444 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +92,6 @@
 				7C8DA2381CF349AB008D51FB /* Assets.xcassets */,
 				7C8DA23A1CF349AB008D51FB /* LaunchScreen.storyboard */,
 				7C8DA23D1CF349AB008D51FB /* Info.plist */,
-				7CDE98991D0715FD00DC4444 /* README.md */,
 				7C8DA22C1CF349AB008D51FB /* Supporting Files */,
 			);
 			path = FabuzaExample;
@@ -153,6 +150,7 @@
 					7C8DA2281CF349AB008D51FB = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 8F2KF8KL3U;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -209,7 +207,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CDE989A1D0715FD00DC4444 /* README.md in Sources */,
 				7CBF6FD61D01CAAA00608365 /* UIAlertController+messages.m in Sources */,
 				7C8DA2341CF349AB008D51FB /* ViewController.m in Sources */,
 				7CBF6FD51D01CAAA00608365 /* UIAlertController+Blocks.m in Sources */,
@@ -332,6 +329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -351,6 +349,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 8F2KF8KL3U;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,7 +359,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.flexis.idecide.corpsales;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a89c0b98-4dae-4b3b-a607-b1b03abbc278";
+				PROVISIONING_PROFILE_SPECIFIER = "CorpSales iDecide 2016";
 			};
 			name = Release;
 		};

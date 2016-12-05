@@ -14,7 +14,6 @@ FOUNDATION_EXPORT double SCKitVersionNumber;
 //! Project version string for SCKit.
 FOUNDATION_EXPORT const unsigned char SCKitVersionString[];
 
-#import <SCKit/FZTouchVisualizerWindow.h>
 #import <SCKit/FZTestEngine.h>
 
 
