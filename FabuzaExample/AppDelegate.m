@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "UIAlertController+messages.h"
 #import <SCKit/SCKit.h>
 
 @interface AppDelegate ()
@@ -16,18 +15,14 @@
 
 @implementation AppDelegate
 
-- (UIWindow *)window {
-    return [FZTestEngine instance].window;
-}
-
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options {
-    [FZTestEngine instance].externalUrl = url;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[FZTestEngine instance] on];
     
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[FZTestEngine instance] on];
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options {
+    [FZTestEngine instance].externalUrl = url;
     
     return YES;
 }

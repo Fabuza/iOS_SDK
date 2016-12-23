@@ -7,47 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class FZTouchVisualizerWindow;
-
-@protocol FZTestEngineDataSource <NSObject>
-
-//@required
-//- (NSUInteger)getVideoFilesSize;
-
-@optional
-- (UIViewController *_Nonnull)getRootController;
-- (NSArray *_Nonnull)getTouches;
-- (NSArray *_Nonnull)getVideoEvents;
-- (NSArray *_Nonnull)getCustomNumberEvents;
-- (NSArray *_Nonnull)getCustomStringEvents;
-- (NSArray *_Nonnull)getRoutes;
-- (NSDictionary *_Nonnull)getClientScriptActionEvent;
-//- (NSURL *_Nullable)getExternalUrl;
-
-@end
-
-@protocol FZTestEngineDelegate <NSObject>
-
-//@required
-- (void)startRecordScreen:(NSUInteger)screenRecord andCamera:(NSUInteger)cameraRecord;
-- (void)stopRecordWithProgress:(nullable void (^)(NSProgress * _Nonnull progress))progress
-                       success:(nonnull void (^)(NSString * _Nonnull pathToScreenFile, NSString * _Nonnull pathToCameraFile))success
-                       failure:(nonnull void (^)(NSError * _Nonnull error))failure;
-
-@optional
-- (void)didLoadUrl:(NSString *_Nullable)urlString;
-- (void)didStartApp:(NSDictionary *_Nonnull)params;
-- (void)waitForBeginTask:(BOOL)firstStep complete:(dispatch_block_t _Nonnull)complete;
-- (void)willBeginProcessName:(NSString *_Nullable)processName;
-- (void)doProgressProcess:(CGFloat)progressValue forSize:(NSUInteger)size;
-- (void)didEndProcess;
-- (void)didEndTest;
-- (void)readyForTest;
-- (void)didWaitTest;
-- (void)didBeginTask;
-
-@end
+#import "FZTestEngineDataSource.h"
+#import "FZTestEngineDelegate.h"
 
 @interface FZTestEngine : NSObject
 
@@ -63,11 +24,12 @@
 @property (nonatomic, readonly) BOOL needMic;
 @property (nonatomic, readonly) BOOL needLoc;
 @property (nonatomic, readonly) BOOL isReadyToTask;
+@property (nonatomic, readonly) BOOL isExternalResultUploaded;
+@property (nonatomic, readonly) BOOL isOpenFromExternalApp;
 @property (nonatomic, assign) id<FZTestEngineDataSource> _Nonnull dataSource;
 @property (nonatomic, assign) id<FZTestEngineDelegate> _Nonnull delegate;
 
 @property (nonatomic) NSURL * _Nullable externalUrl;
-@property (nonatomic, strong)  UIWindow * _Nonnull window;
 
 + (instancetype _Nonnull)instance;
 
@@ -75,7 +37,6 @@
 - (void)continueLastTest;
 - (void)beginTest;
 - (void)openFabuzaWithParams:(NSDictionary *_Nullable)params;
-- (NSDictionary *_Nullable)parseExternalTestParamsFromUrl:(NSURL *_Nullable)url;
 - (NSString *_Nonnull)getTaskQueryParams;
 - (void)stopTaskAndBeginNext;
 - (NSString *_Nullable)getCustomJS;

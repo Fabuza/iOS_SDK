@@ -149,8 +149,8 @@
 				TargetAttributes = {
 					7C8DA2281CF349AB008D51FB = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8F2KF8KL3U;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = VME4W9525D;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -329,7 +329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VME4W9525D;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -337,7 +337,7 @@
 				);
 				INFOPLIST_FILE = FabuzaExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.flexis.idecide.corpsales;
+				PRODUCT_BUNDLE_IDENTIFIER = com.informset.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -348,8 +348,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 8F2KF8KL3U;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = VME4W9525D;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -357,10 +357,10 @@
 				);
 				INFOPLIST_FILE = FabuzaExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.flexis.idecide.corpsales;
+				PRODUCT_BUNDLE_IDENTIFIER = com.informset.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a89c0b98-4dae-4b3b-a607-b1b03abbc278";
-				PROVISIONING_PROFILE_SPECIFIER = "CorpSales iDecide 2016";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

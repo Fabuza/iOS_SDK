@@ -12,8 +12,8 @@ import SCKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow? = FZTestEngine.instance().window
-
+    var window: UIWindow?
+    
     let schemeName = "fabuzaExample"
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
