@@ -8,6 +8,7 @@
 2/ В таргете на закладке Build Phases добавить фрэймворк в раздел Embed Framework
 3/ В настройках проекта выставить параметр "Always Embed Swift Standard Libraries" (в версии xcode ниже 8 это параметр "Embedded content contains swift code") в YES 
 4/ В Info.plist проекта добавить разрешение на передачу по сети, на использование камеры, геолокации и микрофона:
+~~~~
     <key>NSAppTransportSecurity</key>
     <dict>
         <key>NSAllowsArbitraryLoads</key>
@@ -22,8 +23,10 @@
     <string>Геолокация используется только когда приложение запущено</string>
     <key>NSMicrophoneUsageDescription</key>
     <string>Need Microphone</string>
+~~~~
 
 5/ Если у приложения нет уникальной URL схемы, то ее нужно создать:
+~~~~
 <key>CFBundleURLTypes</key>
 <array>
     <dict>
@@ -35,10 +38,10 @@
     </array>
     </dict>
 </array>
-
+~~~~
 
 6/ Поскольку фрэймворк собран универсальным и для симулятора и для телефона, то перед отправкой в аппстор из него нужно удалить архитектуру симулятора. Это делает нижеследующий скрипт, который нужно в настройках таргета, на закладке Build Phases добавить, как "New run script phase":
-
+~~~~
 APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
 
 # This script loops through the frameworks embedded in the application and
@@ -67,9 +70,10 @@ rm "$FRAMEWORK_EXECUTABLE_PATH"
 mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
 
 done
+~~~~
 
 7/ В AppDelegate.m вставить:
-
+~~~~
 #import <SCKit/SCKit.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -81,9 +85,10 @@ done
     [FZTestEngine instance].externalUrl = url;
     return YES;
 }
+~~~~
 
 8/ Для swift3 в AppDelegate.swift
-
+~~~~
 import SCKit
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -95,4 +100,5 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
     FZTestEngine.instance().externalUrl = url
     return true
 }
-
+~~~~
+No newline at end of file
