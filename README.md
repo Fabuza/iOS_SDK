@@ -5,8 +5,11 @@
 Подключение фрэймворка:
 
 1/ Перетащить фрэймворк SCKit.framework в проект
+
 2/ В таргете на закладке Build Phases добавить фрэймворк в раздел Embed Framework
+
 3/ В настройках проекта выставить параметр "Always Embed Swift Standard Libraries" (в версии xcode ниже 8 это параметр "Embedded content contains swift code") в YES 
+
 4/ В Info.plist проекта добавить разрешение на передачу по сети, на использование камеры, геолокации и микрофона:
 ~~~~
     <key>NSAppTransportSecurity</key>
@@ -101,4 +104,3 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
     return true
 }
 ~~~~
-No newline at end of file
