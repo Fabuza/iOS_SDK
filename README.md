@@ -34,7 +34,7 @@
     <string>Need Microphone</string>
 ```
 
-5. Если у приложения нет уникальной URL схемы, то ее нужно создать:
+5\. Если у приложения нет уникальной URL схемы, то ее нужно создать:
 
 ```
 <key>CFBundleURLTypes</key>
@@ -50,7 +50,7 @@
 </array>
 ```
 
-6. Поскольку Фреймворк собран универсальным и для симулятора и для телефона, то перед отправкой в Appstore из него нужно удалить архитектуру симулятора. Это делает нижеследующий скрипт, который нужно в настройках target, на закладке Build Phases добавить, как "New run script phase":
+6\. Поскольку Фреймворк собран универсальным и для симулятора и для телефона, то перед отправкой в Appstore из него нужно удалить архитектуру симулятора. Это делает нижеследующий скрипт, который нужно в настройках target, на закладке Build Phases добавить, как "New run script phase":
 
 ```
 APP_PATH="${TARGET_BUILD_DIR}/${WRAPPER_NAME}"
@@ -83,7 +83,7 @@ mv "$FRAMEWORK_EXECUTABLE_PATH-merged" "$FRAMEWORK_EXECUTABLE_PATH"
 done
 ```
 
-7. В AppDelegate.m вставить:
+7\. В AppDelegate.m вставить:
 
 ```
 #import <SCKit/SCKit.h>
@@ -99,7 +99,7 @@ done
 }
 ```
 
-8. Для swift3 в AppDelegate.swift
+8\. Для swift3 в AppDelegate.swift
 
 ```
 import SCKit
