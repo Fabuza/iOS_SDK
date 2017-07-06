@@ -337,7 +337,7 @@
 				);
 				INFOPLIST_FILE = FabuzaExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.informset.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabuza.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -357,7 +357,7 @@
 				);
 				INFOPLIST_FILE = FabuzaExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.informset.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fabuza.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

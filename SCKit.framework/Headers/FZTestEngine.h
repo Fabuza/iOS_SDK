@@ -23,6 +23,7 @@
 @property (nonatomic, readonly) BOOL needCam;
 @property (nonatomic, readonly) BOOL needMic;
 @property (nonatomic, readonly) BOOL needLoc;
+@property (nonatomic, readonly) BOOL fullScreen;
 @property (nonatomic, readonly) BOOL isReadyToTask;
 @property (nonatomic, readonly) BOOL isExternalResultUploaded;
 @property (nonatomic, readonly) BOOL isOpenFromExternalApp;
