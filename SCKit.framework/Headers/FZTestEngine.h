@@ -35,6 +35,7 @@
 + (instancetype _Nonnull)instance;
 
 - (void)on;
+- (void)on:(dispatch_block_t _Nullable)complete;
 - (void)continueLastTest;
 - (void)beginTest;
 - (void)openFabuzaWithParams:(NSDictionary *_Nullable)params;

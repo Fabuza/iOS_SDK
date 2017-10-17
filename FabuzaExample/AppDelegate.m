@@ -16,7 +16,9 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[FZTestEngine instance] on];
+    [[FZTestEngine instance] on:^{
+        NSLog(@"");
+    }];
     
     return YES;
 }
