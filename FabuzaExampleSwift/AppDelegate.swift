@@ -18,15 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        FZTestEngine.instance().on {
-            print()
-        }
+        FZTestEngine.instance().checkActiveTest()
         
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         FZTestEngine.instance().externalUrl = url
+        FZTestEngine.instance().on {
+            
+        }
         return true
     }
     

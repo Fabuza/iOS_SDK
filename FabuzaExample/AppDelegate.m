@@ -16,16 +16,17 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[FZTestEngine instance] on:^{
-        NSLog(@"");
-    }];
+    [[FZTestEngine instance] checkActiveTest];
     
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options {
     [FZTestEngine instance].externalUrl = url;
-    
+    [[FZTestEngine instance] on:^{
+        NSLog(@"");
+    }];
+
     return YES;
 }
 
