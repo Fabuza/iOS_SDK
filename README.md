@@ -92,12 +92,15 @@ done
 #import <SCKit/SCKit.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[FZTestEngine instance] on];
+    [[FZTestEngine instance] checkActiveTest];
     return YES;
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options {
     [FZTestEngine instance].externalUrl = url;
+    [[FZTestEngine instance] on:^{
+    
+    }];
     return YES;
 }
 ```
@@ -108,12 +111,15 @@ done
 import SCKit
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    FZTestEngine.instance().on()
+    FZTestEngine.instance().checkActiveTest()
     return true
 }
 
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
     FZTestEngine.instance().externalUrl = url
+    FZTestEngine.instance().on {
+    
+    }
     return true
 }
 ```
