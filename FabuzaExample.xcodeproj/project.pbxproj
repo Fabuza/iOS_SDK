@@ -10,7 +10,6 @@
 		1B7666B921749966007CCAD8 /* SCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7666B821749966007CCAD8 /* SCKit.framework */; };
 		1B7666BA21749979007CCAD8 /* SCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7666B821749966007CCAD8 /* SCKit.framework */; };
 		1B7666BB21749979007CCAD8 /* SCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7666B821749966007CCAD8 /* SCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1B7666BD21749A02007CCAD8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1B7666BC21749A02007CCAD8 /* README.md */; };
 		7C8DA22E1CF349AB008D51FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA22D1CF349AB008D51FB /* main.m */; };
 		7C8DA2311CF349AB008D51FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA2301CF349AB008D51FB /* AppDelegate.m */; };
 		7C8DA2341CF349AB008D51FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA2331CF349AB008D51FB /* ViewController.m */; };
@@ -38,6 +37,8 @@
 /* Begin PBXFileReference section */
 		1B7666B821749966007CCAD8 /* SCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCKit.framework; sourceTree = "<group>"; };
 		1B7666BC21749A02007CCAD8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1B8E03E42174D67B004662DE /* Tests-icon-512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tests-icon-512x512.png"; sourceTree = "<group>"; };
+		1B8E03E62174D6A2004662DE /* Tests-icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tests-icon-57x57.png"; sourceTree = "<group>"; };
 		7C8DA2291CF349AB008D51FB /* FabuzaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FabuzaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8DA22D1CF349AB008D51FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C8DA22F1CF349AB008D51FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				1B7666BC21749A02007CCAD8 /* README.md */,
+				1B8E03E62174D6A2004662DE /* Tests-icon-57x57.png */,
+				1B8E03E42174D67B004662DE /* Tests-icon-512x512.png */,
 				7C8DA22B1CF349AB008D51FB /* FabuzaExample */,
 				7C8DA22A1CF349AB008D51FB /* Products */,
 			);
@@ -184,7 +187,6 @@
 			files = (
 				7C8DA23C1CF349AB008D51FB /* LaunchScreen.storyboard in Resources */,
 				7C8DA2391CF349AB008D51FB /* Assets.xcassets in Resources */,
-				1B7666BD21749A02007CCAD8 /* README.md in Resources */,
 				7C8DA2371CF349AB008D51FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
