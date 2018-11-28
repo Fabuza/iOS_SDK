@@ -25,7 +25,7 @@
 			<string>com.application.fabuzaExample</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fabuzaExample</string>
+				<string>fabuzaApp</string>
 			</array>
 		</dict>
 	</array>
