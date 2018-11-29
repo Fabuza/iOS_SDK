@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B7666B921749966007CCAD8 /* SCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7666B821749966007CCAD8 /* SCKit.framework */; };
-		1B7666BA21749979007CCAD8 /* SCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7666B821749966007CCAD8 /* SCKit.framework */; };
-		1B7666BB21749979007CCAD8 /* SCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7666B821749966007CCAD8 /* SCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1B7EEBD621AFF9B7007EAA41 /* SCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7EEBD521AFF9B7007EAA41 /* SCKit.framework */; };
+		1B7EEBD721AFF9C0007EAA41 /* SCKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7EEBD521AFF9B7007EAA41 /* SCKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1BBCD1F721A8196000EE0D90 /* Manifest-Distr.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BBCD1F621A8196000EE0D90 /* Manifest-Distr.plist */; };
 		7C8DA22E1CF349AB008D51FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA22D1CF349AB008D51FB /* main.m */; };
 		7C8DA2311CF349AB008D51FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA2301CF349AB008D51FB /* AppDelegate.m */; };
@@ -28,7 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1B7666BB21749979007CCAD8 /* SCKit.framework in Embed Frameworks */,
+				1B7EEBD721AFF9C0007EAA41 /* SCKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,8 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1B7666B821749966007CCAD8 /* SCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCKit.framework; sourceTree = "<group>"; };
 		1B7666BC21749A02007CCAD8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1B7EEBD521AFF9B7007EAA41 /* SCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCKit.framework; sourceTree = "<group>"; };
 		1B8E03E42174D67B004662DE /* Tests-icon-512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tests-icon-512x512.png"; sourceTree = "<group>"; };
 		1B8E03E62174D6A2004662DE /* Tests-icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tests-icon-57x57.png"; sourceTree = "<group>"; };
 		1BBCD1F521A8183E00EE0D90 /* manifest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = manifest.plist; sourceTree = "<group>"; };
@@ -63,8 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B7666B921749966007CCAD8 /* SCKit.framework in Frameworks */,
-				1B7666BA21749979007CCAD8 /* SCKit.framework in Frameworks */,
+				1B7EEBD621AFF9B7007EAA41 /* SCKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +101,7 @@
 		7C8DA22B1CF349AB008D51FB /* FabuzaExample */ = {
 			isa = PBXGroup;
 			children = (
-				1B7666B821749966007CCAD8 /* SCKit.framework */,
+				1B7EEBD521AFF9B7007EAA41 /* SCKit.framework */,
 				7CBF6FC81D01CAAA00608365 /* Categories */,
 				7C8DA22F1CF349AB008D51FB /* AppDelegate.h */,
 				7C8DA2301CF349AB008D51FB /* AppDelegate.m */,
