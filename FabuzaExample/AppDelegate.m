@@ -16,7 +16,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    [[FZTestEngine instance] checkActiveTest];
+    [[FZTestEngine instance] checkActiveTest];
 	
     return YES;
 }

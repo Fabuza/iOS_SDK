@@ -21,11 +21,13 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>com.application.fabuzaExample</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fabuzaApp</string>
+				<string>fabuzaExample</string>
 			</array>
 		</dict>
 	</array>
