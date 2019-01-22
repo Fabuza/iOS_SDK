@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import <SCKit/SCKit.h>
 
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +19,10 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [[FZTestEngine instance] checkActiveTest];
+	
+	[Fabric with:@[[Crashlytics class]]];
+	
+	[[FZTestEngine instance] checkActiveTest];
 	
     return YES;
 }

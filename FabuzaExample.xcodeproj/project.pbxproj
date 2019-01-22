@@ -18,6 +18,7 @@
 		7C8DA23C1CF349AB008D51FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8DA23A1CF349AB008D51FB /* LaunchScreen.storyboard */; };
 		7CBF6FD51D01CAAA00608365 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF6FCE1D01CAAA00608365 /* UIAlertController+Blocks.m */; };
 		7CBF6FD61D01CAAA00608365 /* UIAlertController+messages.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF6FD01D01CAAA00608365 /* UIAlertController+messages.m */; };
+		982DC97E3BE7696063DBAA80 /* libPods-FabuzaExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327DFA29D3559740CB8F5860 /* libPods-FabuzaExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		1B8E03E62174D6A2004662DE /* Tests-icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tests-icon-57x57.png"; sourceTree = "<group>"; };
 		1BBCD1F521A8183E00EE0D90 /* manifest.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = manifest.plist; sourceTree = "<group>"; };
 		1BBCD1F621A8196000EE0D90 /* Manifest-Distr.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Manifest-Distr.plist"; sourceTree = "<group>"; };
+		327DFA29D3559740CB8F5860 /* libPods-FabuzaExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FabuzaExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F09798C0CA6126BDDE6E025 /* Pods-FabuzaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FabuzaExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FabuzaExample/Pods-FabuzaExample.release.xcconfig"; sourceTree = "<group>"; };
 		7C8DA2291CF349AB008D51FB /* FabuzaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FabuzaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8DA22D1CF349AB008D51FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C8DA22F1CF349AB008D51FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		7CBF6FCE1D01CAAA00608365 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 		7CBF6FCF1D01CAAA00608365 /* UIAlertController+messages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+messages.h"; sourceTree = "<group>"; };
 		7CBF6FD01D01CAAA00608365 /* UIAlertController+messages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+messages.m"; sourceTree = "<group>"; };
+		E93B7F57E8369F132A1A7B71 /* Pods-FabuzaExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FabuzaExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FabuzaExample/Pods-FabuzaExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7EEBD621AFF9B7007EAA41 /* SCKit.framework in Frameworks */,
+				982DC97E3BE7696063DBAA80 /* libPods-FabuzaExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,8 @@
 				1B7666BC21749A02007CCAD8 /* README.md */,
 				7C8DA22B1CF349AB008D51FB /* FabuzaExample */,
 				7C8DA22A1CF349AB008D51FB /* Products */,
+				A5FC767C4AA5A093F194C6C4 /* Pods */,
+				8BD360CDC4B41355C82F5852 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +142,23 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		8BD360CDC4B41355C82F5852 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				327DFA29D3559740CB8F5860 /* libPods-FabuzaExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5FC767C4AA5A093F194C6C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E93B7F57E8369F132A1A7B71 /* Pods-FabuzaExample.debug.xcconfig */,
+				4F09798C0CA6126BDDE6E025 /* Pods-FabuzaExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C8DA2401CF349AB008D51FB /* Build configuration list for PBXNativeTarget "FabuzaExample" */;
 			buildPhases = (
+				0266710B311746956AFA7DA3 /* [CP] Check Pods Manifest.lock */,
 				7C8DA2251CF349AB008D51FB /* Sources */,
 				7C8DA2261CF349AB008D51FB /* Frameworks */,
 				7C8DA2271CF349AB008D51FB /* Resources */,
@@ -206,6 +231,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0266710B311746956AFA7DA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FabuzaExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7CDE989B1D07166F00DC4444 /* Run Script (Remove unwanted ARCHS from IPA) */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +408,7 @@
 		};
 		7C8DA2411CF349AB008D51FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E93B7F57E8369F132A1A7B71 /* Pods-FabuzaExample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -377,6 +421,7 @@
 					"$(PROJECT_DIR)/FabuzaExample",
 				);
 				INFOPLIST_FILE = FabuzaExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabuza.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,6 +431,7 @@
 		};
 		7C8DA2421CF349AB008D51FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F09798C0CA6126BDDE6E025 /* Pods-FabuzaExample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -398,6 +444,7 @@
 					"$(PROJECT_DIR)/FabuzaExample",
 				);
 				INFOPLIST_FILE = FabuzaExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabuza.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
