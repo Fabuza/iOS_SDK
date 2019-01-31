@@ -21,7 +21,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
 	[Fabric with:@[[Crashlytics class]]];
-	
 	[[FZTestEngine instance] checkActiveTest];
 	
     return YES;
