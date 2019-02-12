@@ -29,7 +29,7 @@
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary *)options {
     [FZTestEngine instance].externalUrl = url;
     [[FZTestEngine instance] on:^{
-        NSLog(@"Fabuza Test engine on");
+        NSLog(@">>>> Fabuza Test engine on");
     }];
 
     return YES;
