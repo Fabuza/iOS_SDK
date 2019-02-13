@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1u6-pQ-Tw8"; */
+"1u6-pQ-Tw8.normalTitle" = "Button";
+
+/* Class = "UISegmentedControl"; 3vX-kA-gEK.segmentTitles[0] = "Yellow"; ObjectID = "3vX-kA-gEK"; */
+"3vX-kA-gEK.segmentTitles[0]" = "Yellow";
+
+/* Class = "UISegmentedControl"; 3vX-kA-gEK.segmentTitles[1] = "Orange"; ObjectID = "3vX-kA-gEK"; */
+"3vX-kA-gEK.segmentTitles[1]" = "Orange";
+
+/* Class = "UISegmentedControl"; 3vX-kA-gEK.segmentTitles[2] = "Blue"; ObjectID = "3vX-kA-gEK"; */
+"3vX-kA-gEK.segmentTitles[2]" = "Blue";
+
+/* Class = "UILabel"; text = "Objective-C"; ObjectID = "mr5-Er-VdV"; */
+"mr5-Er-VdV.text" = "Objective-C";

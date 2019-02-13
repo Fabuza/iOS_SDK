@@ -35,6 +35,8 @@
 
 + (instancetype _Nonnull)instance;
 
++ (NSString *)localizedString:(NSString *)aString;
+
 - (void)on;
 - (void)on:(dispatch_block_t _Nullable)complete;
 - (void)checkActiveTest;

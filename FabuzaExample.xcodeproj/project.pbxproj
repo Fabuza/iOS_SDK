@@ -36,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B67214F2214554C003FCC11 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		1B6721502214554C003FCC11 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1B7666BC21749A02007CCAD8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1B7EEBD521AFF9B7007EAA41 /* SCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCKit.framework; sourceTree = "<group>"; };
 		1B8E03E42174D67B004662DE /* Tests-icon-512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tests-icon-512x512.png"; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7C8DA2361CF349AB008D51FB /* Base */,
+				1B67214F2214554C003FCC11 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7C8DA23B1CF349AB008D51FB /* Base */,
+				1B6721502214554C003FCC11 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -323,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -379,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
