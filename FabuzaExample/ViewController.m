@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 
+#import <SCKit/SCKit.h>
+
+
 #define BOTTOM_OFFSET	40.0
 #define MINIMUM_HEIGHT	15.0
 
@@ -35,6 +38,12 @@
 	self.heightConstraint.constant = (maxHeight - MINIMUM_HEIGHT) * 0.5;
 	self.slider.value = self.heightConstraint.constant;
 	self.customView.backgroundColor = [UIColor greenColor];
+    
+//    UIViewController *vc = [[FZTestEngine instance] cameraSetupVC];
+//    [self presentViewController:vc animated:YES completion:^{
+//        
+//    }];
+//    
 }
     
 - (IBAction)backgroundSelectorClicked:(id)sender

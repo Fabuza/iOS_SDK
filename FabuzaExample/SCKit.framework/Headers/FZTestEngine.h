@@ -31,11 +31,20 @@
 @property (nonatomic, assign) id<FZTestEngineDataSource> _Nonnull dataSource;
 @property (nonatomic, assign) id<FZTestEngineDelegate> _Nonnull delegate;
 
+@property (nonatomic) BOOL cameraSetupFinished;
+@property (nonatomic) BOOL cameraAuthorisationRequired;
+
+/**
+	Yes, if 3-2-1 animated sequence was shown
+*/
+@property (nonatomic, readonly) BOOL animatedStartupShown;
+
 @property (nonatomic) NSURL * _Nullable externalUrl;
 
 + (instancetype _Nonnull)instance;
 
-+ (NSString *)localizedString:(NSString *)aString;
+// Unified localisation processor - called from loc() macros
++ (NSString * _Nonnull) localizedString:(NSString * _Nonnull)aString;
 
 - (void)on;
 - (void)on:(dispatch_block_t _Nullable)complete;
@@ -52,4 +61,15 @@
 - (void)connectedCompletionBlock:(void(^ _Nonnull)(BOOL connected))block;
 - (void)dropPushStatus;
 
+// present Animated startup screen 
+- (void) showAnimatedStartupWithCompletion:(void (^ __nullable)(void))completion;
+
+// present caera setup
+- (void) showCameraSetupWithCompletion:(void (^ __nullable)(void))completion;
+
+
+- (void) errorAlert:(NSString *_Nonnull) message;
+
+
+//- (UIViewController *) cameraSetupVC;
 @end
