@@ -26,6 +26,7 @@
 @property (nonatomic, readonly) BOOL needLoc;
 @property (nonatomic, readonly) BOOL fullScreen;
 @property (nonatomic, readonly) BOOL isReadyToTask;
+@property (nonatomic, readonly) BOOL isFabuzaApp;
 @property (nonatomic, readonly) BOOL isExternalResultUploaded;
 @property (nonatomic, readonly) BOOL isOpenFromExternalApp;
 @property (nonatomic, assign) id<FZTestEngineDataSource> _Nonnull dataSource;
